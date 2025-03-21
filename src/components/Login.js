@@ -6,10 +6,13 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const { setUser } = useContext(UserContext);
+  // This line of code just gives the "setUser" method's access to us.
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setUser({ username, password });
+    // Its the first time we are defining what datatype 
+    // will the "user" state (which was defined in UserContextProvider.js) accept!
   };
 
   return (
